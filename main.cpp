@@ -11,6 +11,10 @@ int main() {
         return kmh / ms;
     };
 
+    if(meters <= kmh) {
+        cout << "error. Try again." << endl;
+    }
+
     cout << "insert km/h: " << endl;
     cin >> kmh;
 
