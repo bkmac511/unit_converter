@@ -5,21 +5,16 @@ using namespace std;
 int main() {
 
     float meters = 3.6;
-    int kmh;
+    float kmh;
 
-    auto divide = [](int kmh, int ms) -> int {
-        return kmh / ms;
+    auto divide = [meters](int kmh) -> float {
+        return static_cast<float>(kmh) / meters;
     };
-
-    if(meters <= kmh) {
-        cout << "error. Try again." << endl;
-    }
 
     cout << "insert km/h: " << endl;
     cin >> kmh;
 
-    int result = divide(kmh,meters);
-
+    float result = divide(kmh);
     cout << result << endl;
 
     return 0;
